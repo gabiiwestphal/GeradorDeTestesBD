@@ -1,0 +1,28 @@
+﻿namespace GeradorDeTestes.WinApp.Compartilhado
+{
+    public abstract class ConfiguracaoToolboxBase
+    {
+        public abstract string TipoCadastro { get; }
+
+        public abstract string TooltipInserir { get; }
+
+        public virtual string TooltipEditar { get; }
+
+        public abstract string TooltipExcluir { get; }
+
+        public virtual string TooltipVisualizarDetalhes { get; }
+
+        public virtual bool InserirHabilitado { get { return true; } }
+
+        public virtual bool EditarHabilitado { get { return true; } }
+
+        public virtual bool ExcluirHabilitado { get { return true; } }
+
+        public virtual bool VisualizarDetalhesHabilitado { get { return false; } }
+
+        public virtual bool GerarPdfHabilitado { get { return false; } }
+        public virtual bool DuplicarHabilitado { get { return false; } }
+        public virtual string TooltipGerarPdf { get; }
+        public virtual string TooltipDuplicar { get; }
+    }
+}
